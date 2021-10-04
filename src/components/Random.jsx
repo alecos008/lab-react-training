@@ -1,7 +1,7 @@
 import React from 'react';
 
-function getRandomNum(num1, num2) {
-  return Math.floor(Math.random() * num2);
+function getRandomNum(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
 function Random({ min, max }) {
