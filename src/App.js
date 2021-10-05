@@ -38,10 +38,10 @@ function App() {
       <Greetings lang="fr">François</Greetings>
       <Greetings lang="en">Louise</Greetings>
       <Greetings lang="es">Lucia</Greetings>
-      <Random min="0" max="6"></Random>
-      <Random min="1" max="100"></Random>
-      <Random min="6" max="1000"></Random>
-      <Random min="2" max="100"></Random>
+      <Random min={1} max={6}></Random>
+      <Random min={1} max={100}></Random>
+      <Random min={6} max={1000}></Random>
+      <Random min={2} max={100}></Random>
       <BoxColor
         r={Math.floor(Math.random() * 255)}
         g={Math.floor(Math.random() * 255)}
@@ -55,7 +55,8 @@ function App() {
       <div className="cards-div">
         <CreditCard
           type="../img/visa.png"
-          expirationMonth={Math.floor(Math.random() * 12 - 1 + 1) + 1}
+          number="1234567891234561"
+          expirationMonth={Math.floor(Math.random() * 12 + 1)}
           expirationYear={2025}
           bank="BBVA"
           owner="Alejandro Cazorla"
@@ -64,7 +65,8 @@ function App() {
         />
         <CreditCard
           type="../img/master-card.svg"
-          expirationMonth={Math.floor(Math.random() * 12 - 1 + 1) + 1}
+          number="1234567891234561"
+          expirationMonth={Math.floor(Math.random() * 12 + 1)}
           expirationYear={2024}
           bank="Santander"
           owner="Fernando Cazorla"
@@ -73,7 +75,8 @@ function App() {
         />
         <CreditCard
           type="../img/visa.png"
-          expirationMonth={Math.floor(Math.random() * 12 - 1 + 1) + 1}
+          number="1234567891234561"
+          expirationMonth={Math.floor(Math.random() * 12 + 1)}
           expirationYear={2027}
           bank="N26"
           owner="Fernando Cazorla"

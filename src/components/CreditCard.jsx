@@ -1,9 +1,7 @@
 import React from 'react';
 
-function getCardNum() {
-  let ccNum = Math.floor(Math.random() * 10000000000000000).toString();
-  let hiddenNum = '**** **** **** ' + ccNum.slice(ccNum.length - 4);
-  return hiddenNum;
+function hideCardNum(number) {
+  return '**** **** **** ' + number.slice(number.length - 4);
 }
 
 function CreditCard({
@@ -33,7 +31,7 @@ function CreditCard({
         alt="Card Type"
         style={{ width: '15%', marginLeft: '75%', marginTop: '5%' }}
       />
-      <p>{getCardNum()}</p>
+      <p>{hideCardNum(number)}</p>
       <p>
         Expires {expirationMonth}/{expirationYear} {'     '} {bank}
       </p>
